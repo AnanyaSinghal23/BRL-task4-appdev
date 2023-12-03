@@ -1,24 +1,24 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>reCAPTCHA</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="ec2-3-7-70-25.ap-south-1.compute.amazonaws.com" async defer></script>
 </head>
 <body style='background-color: aqua;'>
 <div style='height: 60px;'></div>
 <form action="?" method="POST">
     <div class="g-recaptcha"
          data-sitekey="https://www.google.com/recaptcha/api/siteverify?secret=${secretkey}&response=${Response}"
-         data-callback="ec2-3-7-70-25.ap-south-1.compute.amazonaws.com"></div>
-
+         data-callback="captchaCallback"></div>
+         
 </form>
 <script>
       function captchaCallback(response){
-        //console.log(response);
+        console.log(response);
         if(typeof Captcha!=="undefined"){
           Captcha.postMessage(response);
         }
       }
     </script>
 </body>
-</html> -->
+</html>
